@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoke Pip y Pop</title>
+</head>
+<body>
+    <h1>Bienvenidos al karaoke de Pip y Pop</h1>
+
+    <!--Formulario para agregar canciones-->
+
+    <form id="song_form">
+        <label for="song_name">Nombre de la cancion</label>
+    <input id="song_name" type="text" required>
+    <label for="artist_name">Nombre de el artista</label>
+    <input id="artist_name" type="text" required>
+    <label for="url_song">Ingresa el enlace de la canciones</label>
+    <input id="url_song" type="url" required>
+
+<button type="submit">Agregar en  la lista</button>
+
+    </form>
+
+    <!--Lista de canciones-->
+    <h2>Lista de reproducion</h2>
+
+    <ul id="play_list"></ul>
+
+    <script src="main.js"></script>
+</body>
+</html>
