@@ -1,0 +1,32 @@
+body{
+    font-family: fantasy;
+    font-size: 30px;
+    margin: 5%;
+    padding: 5%;
+    display: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:rgb(202, 212, 57);
+
+}
+
+h1{
+    text-align: center;
+    color: purple;
+    font-size: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button{
+    background-color: red;
+    color:black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: all-scroll;
+}
+.img-formulario {
+    width: 100%;
+    max-width: 80px;
+    margin-top: 20px;
+    border-radius: 8px;
+}

@@ -1,34 +1,36 @@
-/// conexion con html (seleccionar elementos)
+// Conexión con HTMl (Seleccionar elementos)
 
-const songform = document.getElementById("song_form");
-const playlist = document.getElementById("play_list")
+const songForm = document.getElementById('song_form');
+const playList = document.getElementById('play_list');
 
-///funcionpara agrgar una cancion a la lista
-function addSong(songName, artistName, songUrl){
-    const listSong = document.createElement('li')
+// Función para agregar una canción a la lista
+
+function addSong(songName, artistName, songUrl) {
+    const listSong = document.createElement('li');
     listSong.innerHTML = `
-                <strong>${songName}</strong>
-                -${artistName} 
-                <a href="${songUrl}"  target="_blank" >Escuchar</a>
-                <button class="delete_btn" >Eliminar</button>
+            <strong> ${songName} </strong> 
+            - ${artistName}
+            <a href="${songUrl}" target="_blank" >Reproducir</a>
+            <button class="delete-btn" >Eliminar</button>
     `;
+    //Agregar al html
+    playList.appendChild(listSong);
+
+
 
 }
-///Agregar al html
-    playlist.appendChild("list_Song");
 
+//Manejo de envio de formularios (Eventos)
 
-    //Manejo de envio del formulario (eventos)
-songform.addEventListener('submit', (event) =>{
-event.preventDefault();
+songForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
+    //Obtener datos del formulario
+    const songName = document.getElementById("song_name").value;
+    const artistName = document.getElementById("artist_name").value;
+    const songUrl = document.getElementById("url_song").value;
 
-    ///obtener datos del formulario
-const songName=document.getElementById("song_name").value;
-const artistName=document.getElementById("artist_name").value;
-const songUrl=document.getElementById("url_name").value;
+    addSong(songName, artistName, songUrl);
 
-addSong(songName, artistName, songUrl);
-
-songform.reset();
+    songForm.reset();
 })
